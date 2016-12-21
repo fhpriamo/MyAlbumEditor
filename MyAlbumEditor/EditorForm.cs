@@ -88,6 +88,10 @@ namespace MyAlbumEditor
                 Text = "Album " + Manager.ShortName;
                 lstPhotos.BackColor = SystemColors.Window;
 
+                lstPhotos.FormatString = Manager.Album.GetDescriptorFormat();
+                if (Manager.Album.Descriptor == PhotoAlbum.DescriptorOption.DateTaken)
+                    lstPhotos.FormatString = "dMMMM dd, yyyy";
+
                 lstPhotos.BeginUpdate();
                 lstPhotos.Items.Clear();
                 foreach (Photograph p in Manager.Album)
