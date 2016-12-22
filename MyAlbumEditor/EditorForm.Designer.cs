@@ -183,6 +183,7 @@
             this.lstPhotos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.lstPhotos.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
             this.lstPhotos.FormattingEnabled = true;
             this.lstPhotos.HorizontalScrollbar = true;
             this.lstPhotos.Location = new System.Drawing.Point(5, 10);
@@ -190,6 +191,8 @@
             this.lstPhotos.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.lstPhotos.Size = new System.Drawing.Size(260, 108);
             this.lstPhotos.TabIndex = 5;
+            this.lstPhotos.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.lstPhotos_DrawItem);
+            this.lstPhotos.MeasureItem += new System.Windows.Forms.MeasureItemEventHandler(this.lstPhotos_MeasureItem);
             this.lstPhotos.SelectedIndexChanged += new System.EventHandler(this.lstPhotos_SelectedIndexChanged);
             this.lstPhotos.DoubleClick += new System.EventHandler(this.lstPhotos_DoubleClick);
             // 
