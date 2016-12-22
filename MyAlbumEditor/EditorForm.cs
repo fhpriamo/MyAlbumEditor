@@ -75,7 +75,7 @@ namespace MyAlbumEditor
         {
             if (Manager == null)
             {
-                grpPhotos.Enabled = false;
+                pagePhotos.Enabled = false;
                 btnAlbumProps.Enabled = false;
                 Text = "The selected album could not be opened";
                 lstPhotos.BackColor = SystemColors.Control;
@@ -83,7 +83,7 @@ namespace MyAlbumEditor
             }
             else
             {
-                grpPhotos.Enabled = true;
+                pagePhotos.Enabled = true;
                 btnAlbumProps.Enabled = true;
                 Text = "Album " + Manager.ShortName;
                 lstPhotos.BackColor = SystemColors.Window;
